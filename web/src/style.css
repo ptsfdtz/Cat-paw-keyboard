@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.paw-container {
+    display: grid;
+    grid-template-areas: 
+        "first center second"
+        "third . fourth";
+    gap: 10px;
+    padding: 20px;
+    border: 2px solid #ff69b4; 
+    border-radius: 10px; 
+    background-color: #fff;
+}
+
+.paw-center {
+    grid-area: center;
+    width: 60px;
+    height: 60px;
+    background-color: pink;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.paw-first, .paw-second, .paw-third, .paw-fourth {
+    width: 40px;
+    height: 40px;
+    background-color: lightpink;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.paw-first {
+    grid-area: first;
+}
+
+.paw-second {
+    grid-area: second;
+}
+
+.paw-third {
+    grid-area: third;
+}
+
+.paw-fourth {
+    grid-area: fourth;
+}
