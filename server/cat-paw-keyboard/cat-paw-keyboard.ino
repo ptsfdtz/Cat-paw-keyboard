@@ -1,9 +1,31 @@
-void setup() {
-  // put your setup code here, to run once:
+#include <BleKeyboard.h>
 
+const char* deviceName = "ESP32 Keyboard";  
+const char* deviceManufacturer = "ESP32";   
+
+BleKeyboard bleKeyboard(deviceName, deviceManufacturer, 100); 
+
+void setup() {
+    Serial.begin(115200);
+    bleKeyboard.begin();  
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  if (bleKeyboard.isConnected()) {
+    if (digitalRead(BUTTON_PIN_1) == LOW) {
+      bleKeyboard.press('a');  
+      bleKeyboard.releaseAll();
+    }
 
+    if (digitalRead(BUTTON_PIN_2) == LOW) {
+      bleKeyboard.press('b'); 
+      bleKeyboard.releaseAll();
+    }
+
+    if (digitalRead(BUTTON_PIN_3) == LOW) {
+      bleKeyboard.press(KEY_RETURN);
+      bleKeyboard.releaseAll();
+    }
+  }
+  delay(10); 
 }
