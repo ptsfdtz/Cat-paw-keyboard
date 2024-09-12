@@ -36,6 +36,8 @@ body {
     right: 0;
     display: flex;
     justify-content: space-evenly;
+    /* 调整间距 */
+    margin: 0 30px;
 }
 
 .paw-toe {
