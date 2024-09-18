@@ -9,41 +9,77 @@ body {
 
 .paw-container {
     position: relative;
-    width: 300px;
-    height: 240px;
+    width: 480px;
+    height: 600px;
     background-color: #fff;
-    border-radius: 90px 90px 120px 120px;
+    border-radius: 180px 180px 50% 50%;
     border: 16px solid #8B4513;
     box-sizing: border-box;
 }
 
 .paw-center {
     position: absolute;
-    width: 150px;
-    height: 120px;
+    width: 250px;
+    height: 200px;
     background-color: #FFC0CB;
     border: none;
     border-radius: 50% 50% 45% 45%;
-    bottom: 20px;
+    /* 居中对齐 */
     left: 50%;
-    transform: translateX(-50%);
+    top: 70%;
+    transform: translate(-50%, -50%); /* 让元素完美居中 */
+    transform-origin: center; /* 确保缩放从中心开始 */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* 平滑过渡 */
 }
+
+.paw-center:hover {
+    transform: translate(-50%, -50%) scale(1.05); /* 保持居中同时进行缩放 */
+    background-color: #ffa2b0;
+}
+
+
 
 .paw-toes {
     position: absolute;
-    top: 20px;
+    top: 100px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-evenly;
-    /* 调整间距 */
     margin: 0 30px;
 }
 
-.paw-toe {
-    width: 35px;
-    height: 45px;
+.paw-toe-first,.paw-toe-second, .paw-toe-third, .paw-toe-fourth {
+    width: 70px;
+    height: 90px;
     background-color: #FFB6C1;
     border: none;
     border-radius:45% 45% 50% 50%;
+   transition: 0.3s;
+}
+
+.paw-toe-first:hover,.paw-toe-second:hover, .paw-toe-third:hover, .paw-toe-fourth:hover {
+    transform: scale(1.05);
+    background-color: #ffa2b0;
+}
+
+.paw-toe-first {
+    top: 5%;
+    left: 50%;
+    transform: rotate(-10deg);
+}
+
+.paw-toe-second {
+    top: 30%;
+    left: 15%;
+}
+
+.paw-toe-third {
+    top: 30%;
+    right: 15%;
+}
+
+.paw-toe-fourth {
+    top: 60%;
+    transform:rotate(10deg);
 }
