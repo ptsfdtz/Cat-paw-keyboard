@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,22 @@
     <script src="src/script.js"></script>
     <title>Cat Paw Keyboard</title>
 </head>
-<body>
+
+<body class="body">
     <div class="paw-container" id="pawContainer">
-        <button class="paw-center" id ="pawCenter"></button>
+        <button type="button" class="paw-center" id="pawCenter"></button>
+
         <div class="paw-toes">
-            <button class="paw-toe-first" id="pawFirst"></button>
-            <button class="paw-toe-second" id="pawSecond"></button>
-            <button class="paw-toe-third" id="pawThird"></button>
-            <button class="paw-toe-fourth" id="pawFourth"></button>
+            <button type="button" class="paw-toe" id="pawFirst"></button>
+            <button type="button" class="paw-toe" id="pawSecond"></button>
+            <button type="button" class="paw-toe" id="pawThird"></button>
+            <button type="button" class="paw-toe" id="pawFourth"></button>
         </div>
     </div>
+
+    <div class="theme-container" id="themeContainer">
+        <button type="button" class="change-theme" id="changeTheme"></button>
+    </div>
 </body>
+
 </html>

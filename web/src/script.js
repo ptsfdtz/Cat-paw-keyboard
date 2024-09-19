@@ -10,4 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
     pawSecond.addEventListener('click', () => console.log('Second paw clicked!'));
     pawThird.addEventListener('click', () => console.log('Third paw clicked!'));
     pawFourth.addEventListener('click', () => console.log('Fourth paw clicked!'));
-}); 
+
+});
