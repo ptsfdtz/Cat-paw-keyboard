@@ -28,9 +28,11 @@ body {
     height: 600px;
     border-radius: 180px 180px 50% 50%;
     border: 16px solid #8B4513;
-    box-shadow: inset 8px 8px 8px rgba(0, 0, 0, 0.3),
-        inset -8px -8px 8px rgba(255, 255, 255, 0.3),
-        -10px -10px 10px rgba(0, 0, 0, 0.3);
+    /*border模糊  */
+    /* border-style: hidden; */
+    box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.3),
+        inset -10px -10px 10px rgba(255, 255, 255, 0.3),
+        -15px -15px 15px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -45,9 +47,9 @@ body {
     top: 70%;
     transform: translate(-50%, -50%);
     transform-origin: center;
-    box-shadow: inset 8px 8px 8px rgba(0, 0, 0, 0.3),
-        inset -8px -8px 8px rgba(255, 255, 255, 0.3),
-        -10px -10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 12px 12px 12px rgba(0, 0, 0, 0.3),
+        inset -12px -12px 12px rgba(255, 255, 255, 0.3),
+        -15px -15px 15px rgba(0, 0, 0, 0.3);
 
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
@@ -120,8 +122,8 @@ body {
 .change-theme {
     position: relative;
 
-    width: 60px;
-    height: 60px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
 
     background-color: var(--primary-color);
